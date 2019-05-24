@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :customers
   resources :orders
   get 'main/index'
   root 'main#index'

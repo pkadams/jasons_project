@@ -45,5 +45,17 @@
   <%= @order.Notes %>
 </p>
 
+
+<p>
+  <strong>Email: </strong>
+  <%= @order.email %>
+</p>
+
+
+<p>
+  <strong>Total Price: </strong>
+  <%= @price %>
+</p>
+
 <%= link_to 'Edit', edit_order_path(@order) %> |
 <%= link_to 'Back', orders_path %>
