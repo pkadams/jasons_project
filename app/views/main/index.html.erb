@@ -1,4 +1,13 @@
 <h1>Welcome to Noodle Genius</h1>
 
 
+
+
+
+<%= form_with model: @employee, url: orders_path, local:true, method: "GET" do |form| %>
+  <%= form.text_field :username %>
+  <%= form.text_field :password %>
+  <%= form.submit "Sign in as Employee" %>
+<% end %>
+
 <%= link_to "Click Here to Order!", new_order_path %>

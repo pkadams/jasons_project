@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :employees
   resources :customers
   resources :orders
   get 'main/index'

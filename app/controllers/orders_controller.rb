@@ -4,6 +4,11 @@ class OrdersController < ApplicationController
   # GET /orders
   # GET /orders.json
   def index
+
+    if params[:employee][:username] != 'perry' || params[:employee][:password] != '1234' 
+
+      raise ActionController::RoutingError.new('Not Found')
+    end
     @orders = Order.all
   end
 
