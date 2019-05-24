@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Satay_Wraps: 1
+  Pad_Thai_Chicken: 1
+  Pad_Thai_Beef: 1
+  Pad_Thai_Shrimp: 1
+  Garlic_Noodles_Chicken: 1
+  Garlic_Noodles_Beef: 1
+  Garlic_Noodles_Chicken: 1
+  Garlic_Noodles_Shrimp: 1
+  Notes: MyText
+
+two:
+  Satay_Wraps: 1
+  Pad_Thai_Chicken: 1
+  Pad_Thai_Beef: 1
+  Pad_Thai_Shrimp: 1
+  Garlic_Noodles_Chicken: 1
+  Garlic_Noodles_Beef: 1
+  Garlic_Noodles_Chicken: 1
+  Garlic_Noodles_Shrimp: 1
+  Notes: MyText

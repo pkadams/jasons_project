@@ -1,0 +1,158 @@
+
+<%= stylesheet_link_tag "menu.css" %>
+
+<h1>New Order</h1>
+
+
+ <head>
+    <title>Mickey Club</title>
+    <link rel="stylesheet" href="menu.css">
+    <link rel="icon" type="image/png" href="https://i.etsystatic.com/14238683/r/il/16ece9/1495740419/il_fullxfull.1495740419_by7s.jpg">
+  </head>
+
+  
+  <body>
+    <div class="sticky">
+        <p class="big" class="no-marg">Cosmic Noods</p>
+    </div>
+    <marquee direction="right" scrollamount="40"> <img src="https://media2.giphy.com/media/9Y5fp1qAnCiyyuCT7M/200w.webp?cid=790b76115ce5f04732697568326174b3&rid=200w.webp" class="no-marg"></marquee>
+    <div class="menu">
+        <center><h1>Menu</h1></center>
+                    <%= form_with(model: @order, local: true) do |form| %>
+              <% if @order.errors.any? %>
+                <div id="error_explanation">
+                  <h2><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h2>
+
+                  <ul>
+                  <% @order.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                  <% end %>
+                  </ul>
+                </div>
+              <% end %>
+               
+
+
+              <table>
+                <tr>
+                  <th class="col">House Specials</th>
+                  <th class="col">Price</th>
+                  <th class="col">Quantity</th>
+                </tr>
+                
+                <tr>
+                  <td>Satay Wraps</td>
+                  <td class="prices">$6.25</td>
+                  <td>
+                      <div class="field">
+                      <%= form.label :Satay_Wraps %>
+                      <%= form.number_field :Satay_Wraps %>
+                      </div>  
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>Pad Thai (Chicken)</td>
+                  <td class="prices">$7.75</td>
+                  <td>
+                    <div class="field">
+                     <%= form.label :Pad_Thai_Chicken %>
+                <%= form.number_field :Pad_Thai_Chicken %>
+
+                    </div>
+                  </td>
+                </tr>
+                
+                <tr>
+                  <td>Pad Thai (Beef)</td>
+                  <td class="prices">$8.25</td>
+                  <td> <div class="field">
+                     <%= form.label :Pad_Thai_Beef %>
+                    <%= form.number_field :Pad_Thai_Beef %>
+                  </div>
+                  </td>
+                </tr>
+                
+                <tr>
+                  <td>Pad Thai (Shrimp)</td>
+                  <td class="prices">$8.25</td>
+                  <td><div class="field">
+                      <%= form.label :Pad_Thai_Shrimp %>
+                      <%= form.number_field :Pad_Thai_Shrimp %>
+                    </div>
+                  </td>
+                </tr>
+                
+                <tr>
+                  <td>Garlic Noodle (Chicken)</td>
+                  <td class="prices">$7.75</td>
+                  <td <div class="field">
+                  <%= form.label :Garlic_Noodles_Chicken %>
+                   <%= form.number_field :Garlic_Noodles_Chicken %>
+                 </div>                    
+                  </td>
+                </tr>
+                
+                <tr>
+                  <td>Garlic Noodle (Beef)</td>
+                  <td class="prices">$8.25</td>
+                  <td>
+                    <div class="field">
+                       <%= form.label :Garlic_Noodles_Beef %>
+                <%= form.number_field :Garlic_Noodles_Beef %>
+              </div>
+                  </td>
+                </tr>
+                
+                <tr>
+                  <td>Garlic Noodle (Shrimp)</td>
+                  <td class="prices">$8.25</td>
+                  <td>
+                      <div class="field">
+                       <%= form.label :Garlic_Noodles_Shrimp %>
+                      <%= form.number_field :Garlic_Noodles_Shrimp %>
+              </div>
+                  </td>
+                </tr>
+
+              </table> 
+              
+
+  
+
+              
+
+             
+
+              
+
+              
+
+           
+
+             
+<div class="center_content">
+              <div class="field">
+                <%= form.label :Notes %>
+                <%= form.text_area :Notes %>
+              </div>
+
+              <br>
+
+              <div class="actions">
+                <%= form.submit %>
+              </div>
+            <% end %>
+
+
+</div>
+
+    </div>
+
+    <footer></footer>
+  </body>
+
+
+
+
+<%= link_to 'Back', orders_path %>

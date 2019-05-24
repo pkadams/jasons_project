@@ -1,0 +1,62 @@
+<%= form_with(model: order, local: true) do |form| %>
+  <% if order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(order.errors.count, "error") %> prohibited this order from being saved:</h2>
+
+      <ul>
+      <% order.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+   <p> "MY NAME IS PERRY</p>
+  <div class="field">
+    <%= form.label :Satay_Wraps %>
+    <%= form.number_field :Satay_Wraps %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Pad_Thai_Chicken %>
+    <%= form.number_field :Pad_Thai_Chicken %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Pad_Thai_Beef %>
+    <%= form.number_field :Pad_Thai_Beef %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Pad_Thai_Shrimp %>
+    <%= form.number_field :Pad_Thai_Shrimp %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Garlic_Noodles_Chicken %>
+    <%= form.number_field :Garlic_Noodles_Chicken %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Garlic_Noodles_Beef %>
+    <%= form.number_field :Garlic_Noodles_Beef %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Garlic_Noodles_Chicken %>
+    <%= form.number_field :Garlic_Noodles_Chicken %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Garlic_Noodles_Shrimp %>
+    <%= form.number_field :Garlic_Noodles_Shrimp %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Notes %>
+    <%= form.text_area :Notes %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
