@@ -1,9 +1,5 @@
 
 <%= stylesheet_link_tag "menu.css" %>
-
-<h1>New Order</h1>
-
-
  <head>
     <title>Mickey Club</title>
     <link rel="stylesheet" href="menu.css">
@@ -13,9 +9,13 @@
   
   <body>
     <div class="sticky">
-        <p class="big" class="no-marg">Cosmic Noods</p>
+        <p class="big" class="no-marg"> Cosmic Noods</p>
     </div>
-    <marquee direction="right" scrollamount="40"> <img src="https://media2.giphy.com/media/9Y5fp1qAnCiyyuCT7M/200w.webp?cid=790b76115ce5f04732697568326174b3&rid=200w.webp" class="no-marg"></marquee>
+    <h1 class="centered">New Order</h1>
+    <marquee direction="right" scrollamount="40"> 
+        <img src="https://media.giphy.com/media/4TpIX8dDhuHMJXVNYY/giphy.gif" class="no-marg">
+        <img src="https://media.giphy.com/media/9Y5fp1qAnCiyyuCT7M/giphy.gif" class="no-marg">
+    </marquee>
     <div class="menu">
         <center><h1>Menu</h1></center>
                     <%= form_with(model: @order, local: true) do |form| %>
@@ -30,8 +30,6 @@
                   </ul>
                 </div>
               <% end %>
-               
-
 
               <table>
                 <tr>
@@ -41,7 +39,9 @@
                 </tr>
                 
                 <tr>
-                  <td>Satay Wraps</td>
+                  <td>Satay Wraps
+                    <img src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/recipes/chicken_satay_salad_wraps_recipe/300x300_chicken_satay_salad_wraps_recipe.jpg" class="shrink">
+                  </td>
                   <td class="prices">$6.25</td>
                   <td>
                       <div class="field">
@@ -64,7 +64,9 @@
                 </tr>
                 
                 <tr>
-                  <td>Pad Thai (Beef)</td>
+                  <td>Pad Thai (Beef)
+                    <img src="https://www.chocolateslopes.com/wp-content/uploads/2222/09/steak.pad_.thai_.jpg" class="shrink">
+                  </td>
                   <td class="prices">$8.25</td>
                   <td> <div class="field">
                      <%= form.label :Pad_Thai_Beef %>
@@ -84,7 +86,9 @@
                 </tr>
                 
                 <tr>
-                  <td>Garlic Noodle (Chicken)</td>
+                  <td>Garlic Noodle (Chicken)
+                    <img src="https://i2.wp.com/www.savorynothings.com/wp-content/uploads/2017/02/30-minute-honey-garlic-chicken-noodles-recipe-image-4.jpg?fit=600%2C900&ssl=1" class="shrink">
+                  </td>
                   <td class="prices">$7.75</td>
                   <td <div class="field">
                   <%= form.label :Garlic_Noodles_Chicken %>
@@ -105,7 +109,9 @@
                 </tr>
                 
                 <tr>
-                  <td>Garlic Noodle (Shrimp)</td>
+                  <td>Garlic Noodle (Shrimp)
+                    <img src="https://rasamalaysia.com/wp-content/uploads/2018/11/shrimp-garlic-noodles4.jpg" class="shrink">
+                  </td>
                   <td class="prices">$8.25</td>
                   <td>
                       <div class="field">
@@ -140,7 +146,7 @@
 
               <div class="field">
                 <%= form.label :email %>
-                <%= form.text_area :email %>
+                <%= form.text_field :email %>
               </div>
 
               <br>
@@ -149,16 +155,28 @@
                 <%= form.submit %>
               </div>
             <% end %>
-
-
 </div>
 
-    </div>
 
-    <footer></footer>
+    <marquee direction="right" scrollamount="40"> 
+        <img src="https://media.giphy.com/media/4TpIX8dDhuHMJXVNYY/giphy.gif" class="no-marg">
+        <img src="https://media.giphy.com/media/9Y5fp1qAnCiyyuCT7M/giphy.gif" class="no-marg">
+    </marquee>
+
+
+
+    </div>
+    <%= link_to 'Back', orders_path %>
+    <footer>
+        <div class="flex-container">
+                <p class="spread"> 1-800-NOODS  </p>
+                <p class="spread">cosmicsupport@noods.com </p>
+                <p class="spread">&copy Tyler Weisner and Perry Adamopoulos</p>
+        </div>
+    </footer>
   </body>
 
 
 
 
-<%= link_to 'Back', orders_path %>
+

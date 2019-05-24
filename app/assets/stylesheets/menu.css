@@ -41,7 +41,6 @@ th, td{
     font-size: 20px;
 }
 
-
 footer{
     background-color: brown;
     color: #FDBA21;
@@ -52,8 +51,9 @@ footer{
     height: 60px;
 }
 
-
-
+.centered{
+    text-align: center;
+}
 .sticky {
     position: -webkit-sticky; /* Safari */
     position: sticky;
@@ -77,9 +77,10 @@ footer{
 
 .big{
     font-size: 50px;
+    padding: 20px;
     text-align: center;
     color: #FDBA21;
-    margin: 0px;
+    margin: 0px 0px 20px;
     background-color: brown;
 }
 
