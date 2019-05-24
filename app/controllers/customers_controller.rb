@@ -10,9 +10,11 @@ class CustomersController < ApplicationController
   # GET /customers/1
   # GET /customers/1.json
   def show
+    @email = @customer.email
+   
 
+    @orders = Order.where(email: @email)
 
-    
   end
 
   # GET /customers/new

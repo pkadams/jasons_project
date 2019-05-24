@@ -5,5 +5,19 @@
   <%= @customer.email %>
 </p>
 
+<% @orders.each do |order| %>
+
+      	<p> Num Satay_Wraps: <%= order.Satay_Wraps %></p>
+        <p> Num Pad_Thai_Chicken: <%= order.Pad_Thai_Chicken %></p>
+        <p> Num Pad_Thai_Beef: <%= order.Pad_Thai_Beef %></p>
+        <p> Num Pad_Thai_Shrimp: <%= order.Pad_Thai_Shrimp %></p>
+        <p> Num Garlic_Noodles_Chicken: <%= order.Garlic_Noodles_Chicken %></p>
+        <p> Num Garlic_Noodles_Beef: <%= order.Garlic_Noodles_Beef %></p>
+        <p> Num Garlic_Noodles_Shrimp: <%= order.Garlic_Noodles_Shrimp %></p>
+        <p> Notes: <%= order.Notes %></p>
+    
+    <% end %>
+
+
 <%= link_to 'Edit', edit_customer_path(@customer) %> |
 <%= link_to 'Back', customers_path %>
