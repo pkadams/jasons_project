@@ -7,16 +7,45 @@
 
 <% @orders.each do |order| %>
 
-      	<p> Num Satay_Wraps: <%= order.Satay_Wraps %></p>
-        <p> Num Pad_Thai_Chicken: <%= order.Pad_Thai_Chicken %></p>
-        <p> Num Pad_Thai_Beef: <%= order.Pad_Thai_Beef %></p>
-        <p> Num Pad_Thai_Shrimp: <%= order.Pad_Thai_Shrimp %></p>
-        <p> Num Garlic_Noodles_Chicken: <%= order.Garlic_Noodles_Chicken %></p>
-        <p> Num Garlic_Noodles_Beef: <%= order.Garlic_Noodles_Beef %></p>
-        <p> Num Garlic_Noodles_Shrimp: <%= order.Garlic_Noodles_Shrimp %></p>
-        <p> Notes: <%= order.Notes %></p>
-    
-    <% end %>
+  <table>
+    <tr>
+      <th>Order Item</th>
+      <th>Quantity</th>
+    </tr>
+    <tr>
+      <td>Num Satay_Wraps:</td>
+      <td><%= order.Satay_Wraps %></td>
+    </tr>
+    <tr>
+      <td>Num TEST:</td>
+      <td><%= order.Pad_Thai_Chicken %></td>
+    </tr>
+    <tr>
+      <td>Num Pad_Thai_Beef:</td>
+      <td><%= order.Pad_Thai_Beef %></td>
+    </tr>
+    <tr>
+      <td>Num Pad_Thai_Shrimp:</td>
+      <td><%= order.Pad_Thai_Shrimp %></td>
+    </tr>
+    <tr>
+      <td>Num Garlic_Noodles_Chicken:</td>
+      <td><%= order.Garlic_Noodles_Chicken %></td>
+    </tr>
+    <tr>
+      <td>Num Garlic_Noodles_Beef:</td>
+      <td><%= order.Garlic_Noodles_Beef %></td>
+    </tr>
+    <tr>
+      <td>Num Garlic_Noodles_Shrimp:</td>
+      <td><%= order.Garlic_Noodles_Shrimp %></td>
+    </tr>
+    <tr>
+      <td>Additional Notes:</td>
+      <td><%= order.Notes %></td>
+    </tr>
+  </table>
+<% end %>
 
 
 <%= link_to 'Edit', edit_customer_path(@customer) %> |
